@@ -92,6 +92,9 @@ async function createProduct(req, res) {
         const [existing] = await pool.query('SELECT id FROM products WHERE sku = ?', [sku]);
         if (existing.length > 0) return sendError(res, 'SKU already exists.', 409);
 
+        // Validate Lot Size
+        const finalLotSize = Math.max(1, Number(lot_size) || 1);
+
         const [result] = await pool.query(
             `INSERT INTO products (name, sku, category_id, unit_of_measure, reorder_point, description, cost_price, sale_price, lot_size)
        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)`,
