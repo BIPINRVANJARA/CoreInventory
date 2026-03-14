@@ -1,8 +1,11 @@
-import { Bell, Search, Settings, X } from 'lucide-react';
-import { useNavigate, Link, useSearchParams } from 'react-router-dom';
-import { useState, useEffect } from 'react';
-import { useAuth } from '../context/AuthContext';
-
+/**
+ * Global Header Component
+ * Provides a responsive navigation bar with centralized search.
+ * Features glassmorphic focus transitions and dynamic notifications.
+ * 
+ * @component
+ * @param {string} title - The title for the current view.
+ */
 function Header({ title }) {
     const navigate = useNavigate();
     const [searchParams] = useSearchParams();
