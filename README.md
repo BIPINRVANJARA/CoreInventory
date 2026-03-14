@@ -1,4 +1,7 @@
 # 📦 Vyntro - Intelligent Inventory Management System
+*A professional team-driven solution for high-performance stock tracking.*
+
+---
 
 Vyntro is a premium, full-stack inventory management solution designed for modern warehouses and retail operations. It features real-time stock tracking, financial reporting, and a high-end user interface.
 
