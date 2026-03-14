@@ -1,7 +1,12 @@
 const pool = require('../config/db');
 const { sendSuccess, sendError, getPagination } = require('../utils/helpers');
 
-// GET /api/ledger
+/**
+ * Retrieves a filtered, paginated list of stock movements (ledger entries).
+ * Supports filtering by product, category, movement type, and date range.
+ * @param {Request} req 
+ * @param {Response} res 
+ */
 async function listLedger(req, res) {
     try {
         const { page, limit, offset } = getPagination(req.query);
@@ -43,7 +48,12 @@ async function listLedger(req, res) {
     }
 }
 
-// GET /api/ledger/export — CSV export
+/**
+ * Exports the stock ledger as a CSV file.
+ * Applies the same filters as the listLedger function.
+ * @param {Request} req 
+ * @param {Response} res 
+ */
 async function exportLedger(req, res) {
     try {
         const { product_id, movement_type, start_date, end_date } = req.query;
