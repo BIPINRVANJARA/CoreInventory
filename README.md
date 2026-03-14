@@ -22,10 +22,10 @@ Vyntro is a premium, full-stack inventory management solution designed for moder
 3. `npm run dev`
 
 ## 👥 The Development Team
-- **Vanjara Bipin**: Team Leader & DB Architect
-- **Brijesh Rabari**: Frontend Lead
-- **Rathod Devendrasinh**: Backend (Auth/Products)
-- **Harshil Patel**: Backend (Operations/Ledger)
+- **Vanjara Bipin** ([@BIPINRVANJARA](https://github.com/BIPINRVANJARA)): Leader & DB Architect
+- **Brijesh Rabari** ([@Brijesh090](https://github.com/Brijesh090)): Frontend Lead
+- **Rathod Devendrasinh** ([@Rathoddevendrasinh](https://github.com/Rathoddevendrasinh)): Backend (Auth/Products)
+- **Harshil Patel** ([@Harshilpatel54](https://github.com/Harshilpatel54)): Backend (Operations/Ledger)
 
 ---
 *For detailed team rules and workflow, see [docs/team-workflow.md](./docs/team-workflow.md)*

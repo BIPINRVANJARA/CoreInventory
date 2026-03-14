@@ -6,12 +6,21 @@ This guide outlines the standard operating procedures for the Vyntro development
 
 ## 👥 Meet the Team
 
-| Member | Focus Area |
-| :--- | :--- |
-| **Vanjara Bipin** | Team Leader, Database Architect |
-| **Brijesh Rabari** | Frontend Developer, UI/UX Specialist |
-| **Rathod Devendrasinh** | Backend Developer (Auth & Products) |
-| **Harshil Patel** | Backend Developer (Operations & Ledger) |
+| Member | Focus Area | GitHub / Contact |
+| :--- | :--- | :--- |
+| **Vanjara Bipin** | Team Leader, Database Architect | [@BIPINRVANJARA](https://github.com/BIPINRVANJARA) |
+| **Brijesh Rabari** | Frontend Lead, UI/UX | [@Brijesh090](https://github.com/Brijesh090) |
+| **Rathod Devendrasinh** | Backend (Auth & Products) | [@Rathoddevendrasinh](https://github.com/Rathoddevendrasinh) |
+| **Harshil Patel** | Backend (Ops & Ledger) | [@Harshilpatel54](https://github.com/Harshilpatel54) |
+
+---
+
+## 📧 Team Directory
+
+- **Vanjara Bipin**: vanjarabipin32@gmail.com
+- **Brijesh Rabari**: brijeshrabari65@gmail.com
+- **Rathod Devendrasinh**: vanjarabipin724@gmail.com
+- **Harshil Patel**: harshil2009k@gmail.com
 
 ---
 
