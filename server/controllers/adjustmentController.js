@@ -1,7 +1,11 @@
 const pool = require('../config/db');
 const { sendSuccess, sendError, getPagination, generateReferenceNo } = require('../utils/helpers');
 
-// GET /api/adjustments
+/**
+ * Retrieves a paginated list of all manual stock adjustments.
+ * @param {Request} req 
+ * @param {Response} res 
+ */
 async function listAdjustments(req, res) {
     try {
         const { page, limit, offset } = getPagination(req.query);
@@ -28,7 +32,12 @@ async function listAdjustments(req, res) {
     }
 }
 
-// POST /api/adjustments
+/**
+ * Records a new stock adjustment, updates the physical stock levels,
+ * and creates a corresponding entry in the stock ledger.
+ * @param {Request} req 
+ * @param {Response} res 
+ */
 async function createAdjustment(req, res) {
     const conn = await pool.getConnection();
     try {
