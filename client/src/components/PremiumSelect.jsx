@@ -1,6 +1,17 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { ChevronDown, Check } from 'lucide-react';
 
+/**
+ * A custom, premium-styled selection component that replaces standard HTML selects.
+ * Features a high-end UI with custom chevrons, rounded corners, and focus states.
+ * 
+ * @component
+ * @param {Object} props
+ * @param {string} props.label - Optional label for the select field.
+ * @param {string|number} props.value - Currently selected value.
+ * @param {Array<Object>} props.options - Array of options {id/value, name/label}.
+ * @param {Function} props.onChange - Event handler for value changes.
+ */
 export default function PremiumSelect({ label, value, options, onChange, placeholder = "Select option...", className = "" }) {
     const [isOpen, setIsOpen] = useState(false);
     const containerRef = useRef(null);
