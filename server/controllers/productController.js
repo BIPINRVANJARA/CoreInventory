@@ -182,7 +182,11 @@ async function getProductStock(req, res) {
     }
 }
 
-// GET /api/categories
+/**
+ * Retrieves all product categories with their respective product counts.
+ * @param {Request} req 
+ * @param {Response} res 
+ */
 async function listCategories(req, res) {
     try {
         const [categories] = await pool.query(
@@ -195,7 +199,12 @@ async function listCategories(req, res) {
     }
 }
 
-// POST /api/categories
+/**
+ * Creates a new product category.
+ * Validates category name uniqueness.
+ * @param {Request} req 
+ * @param {Response} res 
+ */
 async function createCategory(req, res) {
     try {
         const { name, description } = req.body;
