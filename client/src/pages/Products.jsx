@@ -1,8 +1,9 @@
-import { useState, useEffect } from 'react';
-import { Package, Search, Plus, FileEdit, XCircle } from 'lucide-react';
-import api from '../api/axios';
-import PremiumSelect from '../components/PremiumSelect';
-
+/**
+ * Products Management Page
+ * Handles CRUD operations for the universal product catalog.
+ * Integrates stock adjustments into the main management workflow.
+ * Features automated "Lot Size" display and premium select integration.
+ */
 export default function Products() {
     const [products, setProducts] = useState([]);
     const [locations, setLocations] = useState([]);
