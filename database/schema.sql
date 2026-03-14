@@ -1,0 +1,1 @@
+-- Vyntro CoreInventory Database Schema

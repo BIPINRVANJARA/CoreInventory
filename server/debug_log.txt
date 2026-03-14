@@ -1,0 +1,6 @@
+[2026-03-14T09:44:58.353Z] Update Data: {"id":"1","name":"iPhone 15 Pro Max","sku":"ELEC-IPH15PM","category_id":1,"cost_price":"149999","sale_price":"179999"}
+[2026-03-14T09:44:58.438Z] Affected Rows: 1
+[2026-03-14T10:13:00.613Z] Update Data: {"id":"16","name":"Vivo y28 5G","sku":"wr-123","category_id":1,"cost_price":"40000.00","sale_price":"47500.00","lot_size":"5"}
+[2026-03-14T10:13:00.759Z] Affected Rows: 1
+[2026-03-14T10:13:23.251Z] Update Data: {"id":"16","name":"Vivo y28 5G","sku":"wr-123","category_id":1,"cost_price":"40000.00","sale_price":"47500.00","lot_size":5}
+[2026-03-14T10:13:23.256Z] Affected Rows: 1
