@@ -1,7 +1,11 @@
 const pool = require('../config/db');
 const { sendSuccess, sendError, getPagination } = require('../utils/helpers');
 
-// GET /api/products
+/**
+ * Retrieves a paginated list of products with inventory counts and category filters.
+ * @param {Request} req 
+ * @param {Response} res 
+ */
 async function listProducts(req, res) {
     try {
         const { page, limit, offset } = getPagination(req.query);
@@ -72,7 +76,12 @@ async function getProduct(req, res) {
     }
 }
 
-// POST /api/products
+/**
+ * Creates a new product in the universal catalog.
+ * Validates SKU uniqueness before insertion.
+ * @param {Request} req 
+ * @param {Response} res 
+ */
 async function createProduct(req, res) {
     try {
         const { name, sku, category_id, unit_of_measure, reorder_point, description, cost_price, sale_price, lot_size } = req.body;
@@ -96,7 +105,13 @@ async function createProduct(req, res) {
     }
 }
 
-// PUT /api/products/:id
+/**
+ * Updates an existing product's metadata and pricing.
+ * Supports partial updates using COALESCE in SQL.
+ * Logs update operations for audit purposes.
+ * @param {Request} req 
+ * @param {Response} res 
+ */
 async function updateProduct(req, res) {
     const fs = require('fs');
     try {
