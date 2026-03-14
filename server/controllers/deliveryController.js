@@ -1,7 +1,11 @@
 const pool = require('../config/db');
 const { sendSuccess, sendError, getPagination, generateReferenceNo } = require('../utils/helpers');
 
-// GET /api/deliveries
+/**
+ * Retrieves a paginated list of delivery orders with status and warehouse filters.
+ * @param {Request} req 
+ * @param {Response} res 
+ */
 async function listDeliveries(req, res) {
     try {
         const { page, limit, offset } = getPagination(req.query);
@@ -58,7 +62,11 @@ async function getDelivery(req, res) {
     }
 }
 
-// POST /api/deliveries
+/**
+ * Creates a new delivery order (outgoing shipment) in draft status.
+ * @param {Request} req 
+ * @param {Response} res 
+ */
 async function createDelivery(req, res) {
     const conn = await pool.getConnection();
     try {
@@ -123,7 +131,12 @@ async function advanceStep(req, res) {
     }
 }
 
-// PUT /api/deliveries/:id/validate
+/**
+ * Finalizes the delivery, deducts physical stock, and logs the movement.
+ * Performs real-time inventory reconciliation and stock availability checks.
+ * @param {Request} req 
+ * @param {Response} res 
+ */
 async function validateDelivery(req, res) {
     const conn = await pool.getConnection();
     try {
