@@ -1,7 +1,11 @@
 const pool = require('../config/db');
 const { sendSuccess, sendError, getPagination, generateReferenceNo } = require('../utils/helpers');
 
-// GET /api/transfers
+/**
+ * Retrieves a paginated list of internal stock transfers between locations.
+ * @param {Request} req 
+ * @param {Response} res 
+ */
 async function listTransfers(req, res) {
     try {
         const { page, limit, offset } = getPagination(req.query);
@@ -68,7 +72,12 @@ async function getTransfer(req, res) {
     }
 }
 
-// POST /api/transfers
+/**
+ * Creates a new internal transfer request in draft status.
+ * Validates that source and destination locations are different.
+ * @param {Request} req 
+ * @param {Response} res 
+ */
 async function createTransfer(req, res) {
     const conn = await pool.getConnection();
     try {
@@ -104,7 +113,12 @@ async function createTransfer(req, res) {
     }
 }
 
-// PUT /api/transfers/:id/validate
+/**
+ * Finalizes the stock transfer, moves physical quantities, and logs movements.
+ * Performs dual-entry ledger logging for both source and destination locations.
+ * @param {Request} req 
+ * @param {Response} res 
+ */
 async function validateTransfer(req, res) {
     const conn = await pool.getConnection();
     try {
