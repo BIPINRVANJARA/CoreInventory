@@ -1,4 +1,7 @@
 # 🚀 Vyntro - Professional Team Collaboration Guide
+*Version 1.0.0 — Established by Vanjara Bipin (Team Leader)*
+
+---
 
 This guide outlines the standard operating procedures for the Vyntro development team to ensure smooth collaboration and high-quality code.
 
